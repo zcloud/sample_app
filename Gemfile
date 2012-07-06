@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 gem 'bootstrap-sass', '2.0.4.0'
+gem 'bcrypt-ruby',  '3.0.1'
 
 group :test do
 	gem 'capybara', '1.1.2'
@@ -10,6 +11,7 @@ end
 group :development do
 	gem 'sqlite3', '1.3.6'
 	gem 'rspec-rails', '2.10.1'
+	gem 'annotate', '~> 2.4.1.beta'
 end
 
 group :production do
