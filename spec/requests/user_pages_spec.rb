@@ -33,7 +33,8 @@ describe "User pages" do
 						click_button submit 
 					end
 					it { should have_selector('title', text: 'Sign up') }
-					it { should have_content('error') }
+					it { should have_error_message() }
+
 					it { should have_content("Name can't be blank") }
 				end
 				
@@ -46,7 +47,7 @@ describe "User pages" do
 						click_button submit 
 					end
 					it { should have_selector('title', text: 'Sign up') }
-					it { should have_content('error') }
+					it { should have_error_message() }
 					it { should have_content("Email can't be blank") }
 				end
 				
@@ -59,7 +60,7 @@ describe "User pages" do
 						click_button submit 
 					end
 					it { should have_selector('title', text: 'Sign up') }
-					it { should have_content('error') }
+					it { should have_error_message() }
 					it { should have_content("Password can't be blank") }
 
 				end
@@ -73,7 +74,7 @@ describe "User pages" do
 						click_button submit 
 					end
 					it { should have_selector('title', text: 'Sign up') }
-					it { should have_content('error') }
+					it { should have_error_message() }
 					it { should have_content("Password confirmation can't be blank") }
 				end
 				
@@ -86,7 +87,7 @@ describe "User pages" do
 						click_button submit 
 					end
 					it { should have_selector('title', text: 'Sign up') }
-					it { should have_content('error') }
+					it { should have_error_message() }
 					it { should have_content("Password is too short (minimum is 6 characters)") }
 				end
 			end
